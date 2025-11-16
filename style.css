@@ -890,7 +890,7 @@ html {
 .phone-frame {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
