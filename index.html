@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eventify</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  
+</head>
+
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="e.png" alt="Eventify Logo" class="logo" />
+        <span>Eventify</span>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+  <a href="#home">Home</a>
+  <a href="#services">Our Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#gallery">Gallery</a>
+  <a href="venues.html">Venues</a>
+
+</nav>
+
+
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-slider" id="home">
+  <div class="hero-slide active" style="background-image: url('h1.png');">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Plan Your Dream Event Effortlessly</h1>
+        <p>Discover top events, book tickets, and manage everything in one platform.</p>
+        <button id="heroBookBtn" class="hero-btn">Plan your dream event</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('h2.png');">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Celebrate Life’s Best Moments</h1>
+        <p>From weddings to concerts, we make every event shine bright.</p>
+        <a href="#services" class="btn btn-primary">Our Services</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('h3.png');">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Where Every Detail Matters</h1>
+        <p>Our team turns your dream event into reality with passion and precision.</p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  let index = 0;
+
+  function showNextSlide() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 5000); // every 5 seconds
+</script>
+
+
+  <!-- ✅ WELCOME SECTION -->
+  <section class="welcome">
+    <div class="container">
+      <p class="welcome-sub">Welcome To <span class="highlight">Eventify</span></p>
+      <h2 class="welcome-title">Best Event Planners In <span class="highlight">Pakistan</span></h2>
+      <p class="welcome-text">
+        Eventify comprises a team of professional planners that make your events truly memorable. 
+        We go beyond expectations — creating elegant weddings, exciting concerts, and successful corporate events.
+        From concept to completion, our experts ensure every moment feels extraordinary.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </section>
+<!-- =====ABOUT OUR STORY===== -->
+  <section class="container my-5" id="about">
+  <div class="row align-items-center">
+    <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+      <img src="about.png.jpeg" alt="Our Story" class="img-fluid rounded shadow about-img">
+    </div>
+    <div class="col-md-6">
+      <h1 class="fw-bold mb-3 about-heading" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        Our Story
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+        Founded with passion and creativity, our brand started as a small idea and grew into something meaningful.
+        We believe in blending innovation with simplicity — offering products that make your everyday life easier and more enjoyable.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+        Our team works closely to ensure every project reflects our values: quality, trust, and excellence. Every milestone we achieve
+        is because of the dedication of our amazing people and the trust of our valued customers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION AND VISION ===== -->
+  <section class="mission-vision">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-duration="1000">
+        <div class="mission-box">
+          <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+          <p>
+            To empower individuals and organizations through innovation, 
+            creativity, and trust — delivering value that inspires growth and excellence.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="vision-box">
+          <h2><i class="fas fa-eye"></i> Our Vision</h2>
+          <p>
+            To be a leading name recognized for quality, integrity, and 
+            continuous innovation — shaping a brighter and more sustainable future.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ 
+<!-- ===== CORE VALUES SECTION ===== -->
+<section class="core-values py-5" id="core-values">
+  <div class="container text-center">
+    <h1 data-aos="fade-up">Our <span>Core Values</span></h1>
+    <p class="mb-5" data-aos="fade-up" data-aos-delay="150">
+      At Eventify, our values define who we are and how we work.<br>
+      Every project reflects our dedication, creativity, and passion for perfection.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="value-card p-4">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h4>Creativity</h4>
+          <p>We turn imagination into reality with unique ideas and inspiring designs.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="value-card p-4">
+          <i class="fa-solid fa-handshake"></i>
+          <h4>Integrity</h4>
+          <p>We believe in honesty, transparency, and trust in every relationship.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="value-card p-4">
+          <i class="fa-solid fa-users"></i>
+          <h4>Collaboration</h4>
+          <p>We work closely with our clients and partners to achieve perfection.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="value-card p-4">
+          <i class="fa-solid fa-star"></i>
+          <h4>Excellence</h4>
+          <p>We aim for excellence in every event, making each experience special.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FINAL MESSAGE SECTION ===== -->
+  <section class="final-message text-center py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2>Let’s Make Every Moment Unforgettable</h2>
+      <p class="lead mt-3 mb-4">
+        At Eventify, we don’t just plan events — we craft memories that last a lifetime.  
+        Whether it’s a wedding, concert, or corporate celebration, our passion is turning your dream into reality.
+      </p>
+      <a href="#contact" class="btn btn-primary px-4 py-2">Get in Touch</a>
+    </div>
+  </section>
+
+
+  <!-- OUR CORE SERVICES-->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>OUR CORE SERVICES</h2>
+      <p>Hand-picked events across categories — book your spot now.</p>
+    </div>
+
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Concert">Concert</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Corporate">Corporate</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Birthday">Birthday</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search events..." />
+    </div>
+  <!-- 🔘 Book Service Button -->
+<div class="book-btn-container">
+  <button id="bookServiceBtn" class="book-btn">Book Services</button>
+
+</div>
+
+
+
+<div class="grid" id="eventsGrid">
+  <!-- JS will populate event cards here -->
+</div>
+
+    <div class="empty-msg" id="noResults" hidden>No events found.</div>
+
+    <!-- 🎉 Event Images Section -->
+    <div class="event-images">
+      <div class="event-img">
+        <img src="z.png" alt="BIRTHDAY PARTY EVENT">
+        <p>BIRTHDAY PARTY EVENT</p>
+      </div>
+
+      <div class="event-img">
+        <img src="y.png" alt="WEDDING EVENT">
+        <p>WEDDING EVENT</p>
+      </div>
+
+      <div class="event-img">
+        <img src="d.png" alt="CONCERT EVENT">
+        <p>CONCERT EVENT</p>
+      </div>
+    </div> <!-- event-images -->
+  </div> <!-- container -->
+</section> <!-- services -->
+
+
+
+<!-- ✅ CHOOSE US SECTION (NEWLY ADDED) -->
+<section class="choose-us">
+  <div class="container choose-inner">
+    <div class="choose-content">
+      <h2>Choose The Best Event Management Company In Pakistan</h2>
+      <p>
+        Eventify brings your imagination to life! From corporate events to grand weddings,
+        we handle every detail with perfection. Our creative planners, top-tier vendors,
+        and modern approach ensure that your event is nothing short of spectacular.
+      </p>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> Professional Event Planners</li>
+        <li><i class="fa-solid fa-circle-check"></i> Creative Custom Themes</li>
+        <li><i class="fa-solid fa-circle-check"></i> Affordable Packages</li>
+        <li><i class="fa-solid fa-circle-check"></i> 24/7 Customer Support</li>
+      </ul>
+    </div>
+
+    <div class="choose-image">
+  <div class="phone-frame">
+    <video src="e (1).mp4" autoplay muted loop></video>
+  </div>
+</div>
+    
+  </div>
+</section>
+
+<!-- ✅ GALLERY SHOWCASE SECTION -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <h2 class="gallery-title">Our Gallery Showcase</h2>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All Items</button>
+      <button class="filter-btn" data-filter="concert">Concert</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="Birthday">Birthday</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <!-- Concert -->
+      <div class="gallery-item concert">
+        <img src="a4.png" alt="concert Event">
+      </div>
+      <div class="gallery-item concert">
+        <img src="a5.png" alt="concert Event">
+      </div>
+      <div class="gallery-item concert">
+        <img src="a6.png" alt="concert Event">
+      </div>
+
+      <!-- Wedding -->
+      <div class="gallery-item wedding">
+        <img src="a1.png" alt="Wedding Event">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="a2.png" alt="Wedding Event">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="a3.png" alt="Wedding Event">
+      </div>
+
+      <!-- Birthday -->
+      <div class="gallery-item Birthday">
+        <img src="a7.png.avif" alt="Birthday">
+      </div>
+      <div class="gallery-item Birthday">
+        <img src="a8.png" alt="Birthday">
+      </div>
+      <div class="gallery-item Birthday">
+        <img src="a9.png" alt="Birthday">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2 data-aos="fade-up">Let’s Create Something Extraordinary</h2>
+    <p data-aos="fade-up">We’d love to bring your vision to life — tell us about your next event.</p>
+    <form id="contactForm" data-aos="zoom-in">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Tell us about your event..." rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  
+
+  <!-- FOOTER -->
+ <footer class="footer bg-dark text-light pt-5 pb-3">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h2 class="brand-title">EVENTIFY</h2>
+        <p>Eventify Event Planner Services has the creativity and passion to make your event unforgettable.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f me-3"></i></a>
+          <a href="#"><i class="fab fa-instagram me-3"></i></a>
+          <a href="#"><i class="fab fa-youtube me-3"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5>QUICK LINKS</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Wedding</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5>CONTACT US</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Karachi, Pakistan</p>
+        <p><i class="fas fa-envelope me-2"></i>info@eventify.com</p>
+        <p><i class="fas fa-phone me-2"></i>+92 300 1234567</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center border-top pt-3 mt-4">
+    © 2025 Eventify — All Rights Reserved.
+  </div>
+</footer>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+   
+   <!-- ===== SCROLL ANIMATION SCRIPT ===== -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,   // smooth speed
+    once: true,       // animation only once
+    disable: 'mobile' // disable animations on mobile
+  });
+</script>
+
+<!-- 💬 Single Shared Full-Page Form -->
+<div id="eventBookingModal" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Book Your Event</h2>
+    <form id="bookingForm">
+      <label>Name:</label>
+      <input type="text" name="name" placeholder="Enter your name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Enter your email" required />
+
+      <label>Event Date:</label>
+      <input type="date" name="event_date" required />
+
+      <label>Event Details:</label>
+      <textarea name="event_details" placeholder="Tell us about your event..." rows="3"></textarea>
+
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" id="cancelModalBtn" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ⚙️ JS (for both Hero & Services buttons) -->
+<script>
+  const openFormButtons = [ 
+    document.getElementById('heroBookBtn'), 
+    document.getElementById('bookServiceBtn')
+  ];
+
+  const modal = document.getElementById('eventBookingModal');
+  const cancelBtn = document.getElementById('cancelModalBtn');
+
+  openFormButtons.forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+      });
+    }
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+<script>
+  // Scroll to section if coming from another page (like venues.html)
+  document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+</script>
+
+<script>
+  // Auto open form if user came from venues page
+  if (window.location.hash === '#openForm') {
+    const modal = document.getElementById('eventBookingModal');
+    if (modal) {
+      setTimeout(() => {
+        modal.style.display = 'flex';
+      }, 400);
+    }
+  }
+</script>
+
+  <!-- Custom Popup for Success/Error Messages -->
+  <div id="customPopup" class="popup-overlay">
+    <div class="popup-content">
+      <span id="popupIcon" class="popup-icon">✓</span>
+      <h3 id="popupTitle">Success!</h3>
+      <p id="popupMessage">Your message has been submitted successfully.</p>
+      <button id="popupCloseBtn" class="popup-close-btn">OK</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to show custom popup
+    function showPopup(type, title, message) {
+      const popup = document.getElementById('customPopup');
+      const popupContent = popup.querySelector('.popup-content');
+      const popupIcon = document.getElementById('popupIcon');
+      const popupTitle = document.getElementById('popupTitle');
+      const popupMessage = document.getElementById('popupMessage');
+
+      // Reset classes
+      popupContent.classList.remove('success', 'error');
+
+      // Set content based on type
+      if (type === 'success') {
+        popupContent.classList.add('success');
+        popupIcon.textContent = '✓';
+      } else if (type === 'error') {
+        popupContent.classList.add('error');
+        popupIcon.textContent = '✕';
+      }
+
+      popupTitle.textContent = title;
+      popupMessage.textContent = message;
+      popup.style.display = 'flex';
+    }
+
+    // Close popup
+    document.getElementById('popupCloseBtn').addEventListener('click', () => {
+      document.getElementById('customPopup').style.display = 'none';
+    });
+
+    // Handle contact form submission
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        showPopup('success', 'Success!', 'Contact form submitted successfully!');
+        e.target.reset();
+      } catch (error) {
+        showPopup('error', 'Error!', 'Error submitting contact form.');
+      }
+    });
+
+    // Handle booking form submission
+    document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      try {
+        const response = await fetch('http://localhost:3000/api/book', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        showPopup('success', 'Success!', 'Booking submitted successfully!');
+        e.target.reset();
+        modal.style.display = 'none';
+      } catch (error) {
+        showPopup('error', 'Error!', 'Error submitting booking.');
+      }
+    });
+  </script>
+
+
+</body>
+</html>
