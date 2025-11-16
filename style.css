@@ -122,6 +122,12 @@ body {
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
+  border: none;
+  background: transparent;
+}
+
+.close-btn {
+  display: none;
 }
 
 .hamburger span {
@@ -184,6 +190,22 @@ body {
 
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .close-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #d4af37;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-links.active .close-btn {
+    display: block;
   }
 }
 
@@ -429,6 +451,14 @@ html {
   padding: 100px 0;
   background: #fff;
   overflow: hidden;
+}
+
+/* Reduce spacing after Our Story on mobile */
+@media (max-width: 768px) {
+  #about {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
 }
 
 /* Smooth entry animation */
